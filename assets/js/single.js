@@ -28,11 +28,11 @@ var getRepoIssues = function(repo){
 
             // check if api has pginated issues
             if (response.headers.get("Link")) {
-               document.location.replace("./index.html");
+               displayWarning(repo);
             }
          });
       } else {
-         alert("There was a problem with your request!");
+         document.location.replace("./index.html");
       }
    });
 };
